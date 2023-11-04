@@ -14056,7 +14056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7894966752067230218, guid: 32f77b737adf046e0819dc0ff52f14a4, type: 3}
       propertyPath: tiempoNivel
-      value: 120
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7894966752067230218, guid: 32f77b737adf046e0819dc0ff52f14a4, type: 3}
       propertyPath: tiempoTermino.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -14217,7 +14217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092460957}
   m_Layer: 0
-  m_Name: Enemys
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
