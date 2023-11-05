@@ -17144,9 +17144,10 @@ GameObject:
   - component: {fileID: 577302697}
   - component: {fileID: 577302696}
   - component: {fileID: 577302695}
+  - component: {fileID: 577302699}
   - component: {fileID: 577302698}
   m_Layer: 0
-  m_Name: Plant
+  m_Name: PlantScripts
   m_TagString: Morir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17232,12 +17233,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577302694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4440765, y: 4.814307, z: 7.07399}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 837919907}
-  m_RootOrder: 2
+  m_Father: {fileID: 2026729492}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &577302698
 BoxCollider2D:
@@ -17265,6 +17266,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16513479, y: 0.37566686}
   m_EdgeRadius: 0
+--- !u!114 &577302699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577302694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091363c544b9bf147afe8bfadb4e67f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTimeToAttack: 3
+  animator: {fileID: 577302695}
+  bulletPrefab: {fileID: 5826711253475672720, guid: 8a6def449ff568548a75cc686c8f6b3e, type: 3}
+  launchSpawnPoint: {fileID: 1201633406}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -18333,7 +18350,7 @@ Transform:
   m_Children:
   - {fileID: 679827878}
   - {fileID: 381370990}
-  - {fileID: 577302697}
+  - {fileID: 2026729492}
   - {fileID: 817524197}
   - {fileID: 1044879142}
   m_Father: {fileID: 0}
@@ -19250,6 +19267,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8458741130109780203, guid: 5d34763a16fec4656bb36a4172f1ee78, type: 3}
   m_PrefabInstance: {fileID: 1188455498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1201633405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201633406}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201633406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201633405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.035, y: 0.064, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2026729492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209837485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22620,6 +22668,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1406802497}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2026729491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026729492}
+  m_Layer: 0
+  m_Name: Plant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026729492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026729491}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4440765, y: 4.814307, z: 7.07399}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1201633406}
+  - {fileID: 577302697}
+  m_Father: {fileID: 837919907}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2027035723
 PrefabInstance:
